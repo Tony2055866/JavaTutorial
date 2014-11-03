@@ -19,14 +19,11 @@ public class VolatileTest {
 						increase();
 				}
 			});
-			
 			threads[i].start();
-
 		}
         for(int i=0; i<THREADS_COUNT; i++){
             threads[i].join();
         }
-	
 
 		System.out.println(race);
 	}
